@@ -102,6 +102,11 @@ export default {
 ul{
     list-style: none;
 }
+.loading>img{
+    position:absolute;
+    top:50%;
+    left: 35%;
+}
 .article{
     float: left;
     max-width:1025px;

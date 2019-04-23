@@ -32,7 +32,6 @@
                  }">
                 <span>{{list.title}}</span>
                  </router-link>
-                 <hr>
              </li>
          </ul>
      </div>
@@ -49,7 +48,6 @@
                 }">
                 <span>{{list.title}}</span>
                 </router-link>
-                <hr>
              </li>
          </ul>
      </div>
@@ -108,11 +106,13 @@ a{
     position: relative;
     left: -50px;
     background: rgb(255,255,255);
+    border-radius: 5px;
 }
 .autherinfo>.authersummay>.topbar{
     padding: 10px;
     font-size: 13px;
     background: rgb(246,246,246);
+    border-radius: 5px 5px 0  0;
 }
     .autherinfo>.authersummay>.topbar_author{
         padding: 10px;

@@ -1,12 +1,12 @@
 <template>
     <div class="pagination">
-        <button @click="changeBtn">首页</button>
-        <button @click="changeBtn">上一页</button>
-        <button v-if="jduge">......</button>
+        <button @click="changeBtn" class="home_page">首页</button>
+        <button @click="changeBtn" class="prev">上一页</button>
+        <button v-if="jduge" class="judge">......</button>
         <button v-for="btn in pagebtns" @click='changeBtn(btn)' :class="[{currentPage:btn===currentPage},'pagebtn']">
             {{btn}}
         </button>
-        <button @click="changeBtn">下一页</button>
+        <button @click="changeBtn" class="next">下一页</button>
     </div>
 </template>
 
@@ -64,5 +64,43 @@ export default {
 </script>
 
 <style scoped>
+.pagination>button{
+    width: 130px;
+    height: 40px;
+    background: linear-gradient(to bottom, #4eb5e5 0%,#389ed5 100%); /* W3C */
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    border-bottom: 4px solid #2b8bc6;
+    color: #fbfbfb;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.4);
+    font-size: 15px;
+    text-align: center;
+    text-indent: 5px;
+    box-shadow: 0px 3px 0px 0px rgba(0,0,0,.2);
+    cursor: pointer;
+}
+.pagination>button.currentPage{
+    box-shadow: 0px 2px 0px 0px rgba(0,0,0,.5);
+    top: 2px;
+}
+.pagination>button:active{
+    box-shadow: 0px 2px 0px 0px rgba(0,0,0,.5);
+    top: 1px;
+}
+
+.pagination>button.judge{
+    width: 40px;
+    text-align: center;
+    text-indent:0;
+}
+.pagination>button.pagebtn{
+    width: 40px;
+    text-align: center;
+    text-indent:0;
+    margin: 3px;
+}
 
 </style>
